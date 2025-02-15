@@ -19,7 +19,17 @@
     "source.organizeImports.biome": "always"
   },
   "frontMatter.dashboard.openOnStart": false,
-  "cSpell.words": ["Favicons", "minatoaquas", "monsterstation", "swup"],
+  "cSpell.words": [
+    "Favicons",
+    "iconify",
+    "katex",
+    "mdast",
+    "minatoaquas",
+    "monsterstation",
+    "pagefind",
+    "photoswipe",
+    "swup"
+  ],
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
   }
