@@ -21,14 +21,22 @@
   "frontMatter.dashboard.openOnStart": false,
   "cSpell.words": [
     "Favicons",
+    "fontsource",
+    "Frontmatter",
     "iconify",
     "katex",
+    "lightbox",
     "mdast",
     "minatoaquas",
     "monsterstation",
+    "msrc",
+    "oklch",
     "onwarn",
+    "overlayscrollbars",
     "pagefind",
     "photoswipe",
+    "pswp",
+    "roboto",
     "swup"
   ],
   "[astro]": {
