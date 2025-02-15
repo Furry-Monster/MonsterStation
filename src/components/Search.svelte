@@ -6,7 +6,7 @@ import I18nKey from '@i18n/i18nKey'
 import Icon from '@iconify/svelte'
 let keywordDesktop = ''
 let keywordMobile = ''
-let result = []
+let result:any[] = []
 const fakeResult = [
   {
     url: url('/'),
