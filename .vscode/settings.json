@@ -19,7 +19,7 @@
     "source.organizeImports.biome": "always"
   },
   "frontMatter.dashboard.openOnStart": false,
-  "cSpell.words": ["swup"],
+  "cSpell.words": ["minatoaquas", "swup"],
   "[astro]": {
     "editor.defaultFormatter": "astro-build.astro-vscode"
   }
