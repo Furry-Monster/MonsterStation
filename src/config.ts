@@ -8,7 +8,7 @@ import { LinkPreset } from "./types/config";
 
 export const siteConfig: SiteConfig = {
   title: "MonsterStation",
-  subtitle: "Stupid game developer",
+  subtitle: "FurryMonster's Blog",
   lang: "zh_CN", // 'en', 'zh_CN', 'zh_TW', 'ja', 'ko', 'es', 'th'
   themeColor: {
     hue: 250, // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
@@ -16,11 +16,11 @@ export const siteConfig: SiteConfig = {
   },
   banner: {
     enable: true,
-    src: "assets/images/banner.jpg", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
-    position: "center", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
+    src: "assets/images/banner.png", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+    position: "top", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
     credit: {
-      enable: false, // Display the credit text of the banner image
-      text: "", // Credit text to be displayed
+      enable: true, // Display the credit text of the banner image
+      text: "不知道是哪个画师太太的图", // Credit text to be displayed
       url: "", // (Optional) URL link to the original artwork or artist's page
     },
   },
@@ -77,6 +77,21 @@ export const profileConfig: ProfileConfig = {
       name: "GitHub",
       icon: "fa6-brands:github",
       url: "https://github.com/Furry-Monster",
+    },
+    {
+      name: "Discord",
+      icon: "fa6-brands:discord",
+      url: "https://discord.com/users/1314183151353987094",
+    },
+    {
+      name: "Bilibili",
+      icon: "fa6-brands:bilibili",
+      url: "https://space.bilibili.com/199684075",
+    },
+    {
+      name: "Dev.to",
+      icon: "fa6-brands:dev",
+      url: "https://dev.to/furrymonster",
     },
   ],
 };

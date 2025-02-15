@@ -2,15 +2,15 @@
 title: Unity与C#中的异步编程
 published: 2025-01-29
 description:  我再也不和大佬玩抽象了
-tags: [Unity,游戏开发]
+tags: [Unity,游戏开发,CSharp]
 category: Unity
 draft: false
 ---
 参考文章：
 
-<https://wudaijun.com/2021/11/c-sharp-unity-async-programing/>
+[https://wudaijun.com/2021/11/c-sharp-unity-async-programing/](https://wudaijun.com/2021/11/c-sharp-unity-async-programing/)
 
-<https://hamidmosalla.com/2018/06/24/what-is-synchronizationcontext/>
+[https://hamidmosalla.com/2018/06/24/what-is-synchronizationcontext/](https://hamidmosalla.com/2018/06/24/what-is-synchronizationcontext/)
 
 ## Motivation
 
@@ -74,7 +74,7 @@ static void Main(string[] args)
 1. 首先，yield return a + 1 返回 4 + 1 = 5，并暂停方法执行。
 2. 然后，程序判断 a % 2 == 0，由于 4 是偶数，执行 yield break;，终止迭代器的执行。
 3. 由于调用 yield break 后方法已停止，之后的 yield return 1; 和 yield return 2; 不会被执行。
-因此，程序会输出：5。
+   因此，程序会输出：5。
 
 不难看出，yield 语句的作用就是暂停函数执行，并返回一个值，这个值可以被迭代器使用。所以一般用yield来做迭代器，可以这样
 
@@ -110,7 +110,7 @@ static void Main(string[] args)
 ### 6. 总结
 
 - Unity的协程实际上是基于C#的 yield 语法，通过使用一些特殊的 YieldInstruction 类来控制异步操作。
-它提供了一种比传统异步编程更简单的方式来处理延时、定时操作或帧控制。
+  它提供了一种比传统异步编程更简单的方式来处理延时、定时操作或帧控制。
 - 尽管Unity协程能做很多事情，但它的灵活性和功能不如JavaScript的Generator或其他一些语言中的协程（比如Golang）。
 
 总体来说，Unity的协程是非常方便的异步工具，但它并不完全等同于其他语言中的协程。
@@ -453,7 +453,7 @@ public class SimpleCoroutineAwaiter : INotifyCompletion
 - 使所有 Unity 的 AsyncOperations 和 Coroutines 可等待 (类似Unity3dAsyncAwaitUtil的适配)
 - 基于 PlayerLoop 的任务(UniTask.Yield, UniTask.Delay, UniTask.DelayFrame…)可以替代所有协程操作
 - 对 MonoBehaviour 消息事件和 uGUI 事件进行 可等待/异步枚举 拓展
-与C#原生 Task/ValueTask/IValueTaskSource 行为高度兼容
+  与C#原生 Task/ValueTask/IValueTaskSource 行为高度兼容
 - ...
 
 > UniTask将**Unity单线程异步编程**诸多实践与**async/await异步编程模型**有机整合，并对Unity Coroutine与C# Task的诸多痛点进行优化和升级，看起来确实有一统Unity异步编程模型的潜力，应该离整合进Unity官方包也不远了。
@@ -461,11 +461,12 @@ public class SimpleCoroutineAwaiter : INotifyCompletion
 ## 总结
 
 大佬说道：
->异步编程模型一直在演进，**看起来写越来越”简单”，可读性越来越”高”，代价是编译器和运行时做了更多的工作**，并且这些工作和原理是作为开发者必须要了解的，以C# async/await为例，如果不能充分了解底层原理，就容易引发:
+
+> 异步编程模型一直在演进，**看起来写越来越”简单”，可读性越来越”高”，代价是编译器和运行时做了更多的工作**，并且这些工作和原理是作为开发者必须要了解的，以C# async/await为例，如果不能充分了解底层原理，就容易引发:
 
 - 异步回调闭包引用**可变上下文**的问题
 - async “无栈编程”本身带来的**理解负担和调试难度**
 - 代码的线程上下文难以分析，容易引发**并发**安全访问的问题
 - 同一段代码在不同的线程执行可能具有完全不同的行为(SynchronizationContext和ExecuteContext不同)
 
->等问题。语言和框架本身只提供选择，作为使用者的我们，在并发越来越”容易”的同时，保持对原理的理解，才能充分发挥工具的作用(享受上限高的好处，避免下限低的问题)。
+> 等问题。语言和框架本身只提供选择，作为使用者的我们，在并发越来越”容易”的同时，保持对原理的理解，才能充分发挥工具的作用(享受上限高的好处，避免下限低的问题)。
