@@ -2,7 +2,7 @@
 title: C#调用系统底层win32API 
 published: 2024-10-30
 description: 最近学习 C# 学到了本机互操作性,查阅了许多资料踩了不少坑（如类型映射、封送结构等），现在整理出一套调用 Win32 API 的方法，因此记录一下顺便分享给大家参考。
-tags: [.NET, CSharp, 底层]
+tags: [.NET,CSharp,Windows]
 category: CSharp
 draft: false
 ---
