@@ -3,7 +3,7 @@ title: 聊聊Vue的diff算法
 published: 2024-10-08
 description: Shake~ Shake~ Shake~
 tags: [前端,Vue,Web,源码]
-category: 前端
+category: 技术杂文
 draft: false
 ---
 相比大家早早听说过了虚拟DOM的存在，Diff算法的运用是虚拟DOM具有高性能的一个重要原因。

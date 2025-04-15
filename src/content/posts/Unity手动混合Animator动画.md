@@ -3,7 +3,7 @@ title: Unity手动混合Animator动画
 published: 2024-10-10
 description:  Unity动画混合的两种方法：CrossFade和CrossFadeInFixedTime的区别和用法。
 tags: [Unity,游戏开发]
-category: Unity
+category: 解决方案
 draft: false
 ---
 ## 一、粗略认识一下两个用来混合的方法

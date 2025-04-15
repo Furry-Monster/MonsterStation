@@ -3,10 +3,9 @@ title: Sass入门初步
 published: 2024-10-12
 description: 今天换个口味，做一下样式
 tags: [语言,CSS,前端]
-category: CSS
+category: 技术杂文
 draft: false
 ---
-
 # 区分CSS，SCSS，SASS
 
 其实很长一段时间我都不知道SCSS和SASS为啥只需要安装：

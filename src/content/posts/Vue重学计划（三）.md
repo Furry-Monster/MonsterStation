@@ -3,7 +3,7 @@ title: Vue重学计划（三）
 published: 2024-10-10
 description:  这周因为学校的事太多，耽误了好久，花了一天把Vue3的响应式数据整理了一下。
 tags: [Vue,前端,源码]
-category: Vue3
+category: Vue重学计划
 draft: false
 ---
 这周因为学校的事太多，耽误了好久，花了一天把Vue3的响应式数据整理了一下。

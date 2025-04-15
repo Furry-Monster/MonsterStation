@@ -3,7 +3,7 @@ title: Java内部类的应用分析
 published: 2024-10-08
 description: 没活硬整，瞎几把写
 tags: [语言,Java]
-category: Java
+category: 技术杂文
 draft: false
 ---
 最近看了几篇博客，又温习了一次内部类相关的内容，感觉有必要在这方面写点博客记录一下，毕竟我个人接触的也不多，平时写代码也不常用，方便以后再次温习。
@@ -52,7 +52,6 @@ class Outer {
       }
   }
   ```
-
 * **封装代码** ，从第一条就能看出来。
 * **简化代码结构** ，例如想要手动实现一个表，那么这个表的数据结构肯定会占很大篇幅，这时候不妨把代码放到内部类，和其他逻辑区分开。比如我们来写一个图的结构：
 
@@ -238,14 +237,14 @@ public class Outer {
 public class Calculator {
   
     public double calculate(int base, int exponent) {
-    
+  
         // 局部静态类用于计算幂
         class PowerCalculator {
             double calculatePower() {
                 return Math.pow(base, exponent);
             }
         }
-    
+  
         PowerCalculator powerCalculator = new PowerCalculator();
         return powerCalculator.calculatePower();  // 调用局部静态类的方法
     }
@@ -306,7 +305,6 @@ public class Calculator {
       }
   }
   ```
-
 * **实现比较器** ，集合排序的时候是需要一个比较器的，也就是我们排序需要一个规则，这和数据库的理论很像，这个时候我们可以用匿名内部类来实现Comparator接口：
 
   ```java

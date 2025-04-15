@@ -3,7 +3,7 @@ title: 一次Avalonia命令绑定Bug
 published: 2024-11-06
 description: 一次Avalonia命令绑定Bug，越过单例限制报错强如怪物，拼尽全力终于战胜
 tags: [.NET, Avalonia, Debug]
-category: Avalonia
+category: 解决方案
 draft: false
 ---
 （~~Avalonia偶遇Command绑定Bug，越过单例限制报错强如怪物，拼尽全力终于战胜~~）

@@ -4,7 +4,7 @@ published: 2025-02-26
 description: ''
 image: ''
 tags: [游戏开发,PM]
-category: PM
+category: 技术杂文
 draft: false 
 lang: ''
 ---

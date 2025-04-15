@@ -3,7 +3,7 @@ title: Vue重学计划（四）
 published: 2024-10-10
 description: 简单把Computed总结一下
 tags: [Vue,前端,源码]
-category: Vue3
+category: Vue重学计划
 draft: false
 ---
 今天状态不错，再写一篇，这样把之前欠的也算补回来了一点。

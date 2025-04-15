@@ -3,7 +3,7 @@ title: 通过EF在Avalonia中操作Sqlite
 published: 2024-10-31
 description: ORM是我主人
 tags: [.NET, Avalonia, EFCore, Sqlite]
-category: Avalonia
+category: 技术杂文
 draft: false
 ---
 首选我们建个MVVM模板的项目，在项目中引入包 `Microsoft.EntityFrameworkCore.Sqlite`
@@ -159,7 +159,7 @@ public class MainWindowViewModel : ViewModelBase
             <Button Content="Refresh" x:Name="Refresh" Click="Refresh_OnClick"/>
             <Button Content="Clear" x:Name="Clear" Click="Clear_OnClick"/>
         </StackPanel>
-      
+    
         <StackPanel Orientation="Vertical" Grid.Row="1">
             <ItemsControl Items="{Binding TodoEntities}">
                 <ItemsControl.ItemTemplate>
