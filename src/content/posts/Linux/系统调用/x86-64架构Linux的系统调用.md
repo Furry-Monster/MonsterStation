@@ -2,7 +2,7 @@
 title: x86-64架构Linux的系统调用
 published: 2025-04-25
 description: "说说系统调用"
-image: ''
+image: ./linux.png
 tags: [OS,源码]
 category: 技术杂文
 draft: false 
