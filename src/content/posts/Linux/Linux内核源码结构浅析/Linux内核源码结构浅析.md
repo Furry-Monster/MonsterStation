@@ -1,7 +1,7 @@
 ---
 title: Linux内核源码结构浅析
 published: 2025-04-01
-description: "2025.4本Linux内核结构分析"
+description: "粗浅Linux内核结构分析"
 image: "./linux_hi.png"
 tags: [OS,源码]
 category: 技术杂文
