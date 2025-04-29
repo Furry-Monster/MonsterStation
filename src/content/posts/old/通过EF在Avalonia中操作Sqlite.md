@@ -3,7 +3,7 @@ title: 通过EF在Avalonia中操作Sqlite
 published: 2024-10-31
 image: ./sqlite.png
 description: ORM是我主人
-tags: [.NET, Avalonia, EFCore, Sqlite]
+tags: [.NET,Avalonia,Sqlite]
 category: 技术杂文
 draft: false
 ---
