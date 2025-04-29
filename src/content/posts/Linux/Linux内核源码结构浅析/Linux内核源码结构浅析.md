@@ -4,7 +4,7 @@ published: 2025-04-01
 description: "粗浅Linux内核结构分析"
 image: "./linux_hi.png"
 tags: [OS,源码,Linux]
-category: 技术杂文
+category: Linux内核分析
 draft: false 
 lang: ''
 ---

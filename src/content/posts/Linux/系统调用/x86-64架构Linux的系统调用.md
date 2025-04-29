@@ -4,7 +4,7 @@ published: 2025-04-25
 description: "说说系统调用"
 image: ./linux.png
 tags: [OS,源码,Linux]
-category: 技术杂文
+category: Linux内核分析
 draft: false 
 lang: ''
 ---
