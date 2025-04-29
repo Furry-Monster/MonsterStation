@@ -1,6 +1,7 @@
 ---
 title: Vue重学计划（六） 
 published: 2024-10-16
+image: ./vue.png
 description:  上一节聊完了SCSS和BEM架构，这一节来说说Vue中的组件部分，组件内容比较多，可能会用好几期博客来慢慢复习了。
 tags: [Vue,前端,源码]
 category: Vue重学计划

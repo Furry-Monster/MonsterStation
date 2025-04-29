@@ -1,6 +1,7 @@
 ---
 title: Vue重学计划（一）
 published: 2024-10-06
+image: ./vue.png
 description: 突然就决定重新学一下Vue3了，这一次准备往更底层的方面研究一下，第一期就简单聊聊Vue的宏观架构方面的二次认知吧
 tags: [Vue,前端,源码]
 category: Vue重学计划

@@ -1,6 +1,7 @@
 ---
 title: Sass入门初步
 published: 2024-10-12
+image: ./sass.png
 description: 今天换个口味，做一下样式
 tags: [语言,CSS,前端]
 category: 技术杂文

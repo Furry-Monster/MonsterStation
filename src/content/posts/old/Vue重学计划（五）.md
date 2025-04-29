@@ -1,6 +1,7 @@
 ---
 title: Vue重学计划（五）
 published: 2024-10-11
+image: ./vue.png
 description: 今日状态不错，特此奖励自己下午写博客一篇
 tags: [Vue,前端,源码]
 category: Vue重学计划

@@ -2,7 +2,7 @@
 title: Unity数据各平台的存储
 published: 2025-02-19
 description: 从本地存储聊到云端存储
-image: ''
+image: ./cover.png
 tags: [Unity,游戏开发]
 category: 技术杂文
 draft: false 

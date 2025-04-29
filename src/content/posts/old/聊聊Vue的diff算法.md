@@ -1,6 +1,7 @@
 ---
 title: 聊聊Vue的diff算法
 published: 2024-10-08
+image: ./vue.png
 description: Shake~ Shake~ Shake~
 tags: [前端,Vue,Web,源码]
 category: 技术杂文

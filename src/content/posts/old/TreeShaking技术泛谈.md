@@ -1,6 +1,7 @@
 ---
 title: TreeShaking技术泛谈
 published: 2024-10-06
+image: ./shaking.png
 description: Tree-shaking 这一术语在前端社区Rollup 中提出。简单概括起来，Tree-shaking 可以使得项目最终构建（Bundle）结果中只包含你实际需要的代码。
 tags: [算法,前端]
 category: 技术杂文

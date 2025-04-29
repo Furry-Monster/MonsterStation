@@ -1,6 +1,7 @@
 ---
 title: Vue重学计划（四）
 published: 2024-10-10
+image: ./vue.png
 description: 简单把Computed总结一下
 tags: [Vue,前端,源码]
 category: Vue重学计划

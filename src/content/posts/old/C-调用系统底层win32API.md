@@ -1,6 +1,7 @@
 ---
 title: C#调用系统底层win32API 
 published: 2024-10-30
+image: ./win32.png
 description: 最近学习 C# 学到了本机互操作性,查阅了许多资料踩了不少坑（如类型映射、封送结构等），现在整理出一套调用 Win32 API 的方法，因此记录一下顺便分享给大家参考。
 tags: [.NET,CSharp,Windows]
 category: 解决方案
@@ -61,28 +62,28 @@ C# 和 C/C++ 的类型并不完全一致，因此需要一套类型映射表来�
 
 对于 C/C++ 基本类型，官方给出了对应的 C# 类型映射表：
 
-| C# 关键字 | .NET 类型                                                   | 本机类型                                                                |
-| --------- | ----------------------------------------------------------- | ----------------------------------------------------------------------- |
-| byte      | System.Byte                                                 | uint8_t                                                                 |
-| sbyte     | System.SByte                                                | int8_t                                                                  |
-| short     | System.Int16                                                | int16_t                                                                 |
-| ushort    | System.UInt16                                               | uint16_t                                                                |
-| int       | System.Int32                                                | int32_t                                                                 |
-| uint      | System.UInt32                                               | uint32_t                                                                |
-| long      | System.Int64                                                | int64_t                                                                 |
-| ulong     | System.UInt64                                               | uint64_t                                                                |
-| char      | System.Char                                                 | char 或 char16_t 依赖于 P/Invoke 或结构的 CharSet。 请参阅字符集文档。  |
+| C# 关键字 | .NET 类型                                                   | 本机类型                                                                  |
+| --------- | ----------------------------------------------------------- | ------------------------------------------------------------------------- |
+| byte      | System.Byte                                                 | uint8_t                                                                   |
+| sbyte     | System.SByte                                                | int8_t                                                                    |
+| short     | System.Int16                                                | int16_t                                                                   |
+| ushort    | System.UInt16                                               | uint16_t                                                                  |
+| int       | System.Int32                                                | int32_t                                                                   |
+| uint      | System.UInt32                                               | uint32_t                                                                  |
+| long      | System.Int64                                                | int64_t                                                                   |
+| ulong     | System.UInt64                                               | uint64_t                                                                  |
+| char      | System.Char                                                 | char 或 char16_t 依赖于 P/Invoke 或结构的 CharSet。 请参阅字符集文档。    |
 |           | System.Char                                                 | char*或 char16_t* 依赖于 P/Invoke 或结构的 CharSet。 请参阅字符集文档。 |
-| nint      | System.IntPtr                                               | intptr_t                                                                |
-| nuint     | System.UIntPtr                                              | uintptr_t                                                               |
-|           | .NET 指针类型（例如，void*）                                | void*                                                                   |
-|           | 从 System.Runtime.InteropServices.SafeHandle 派生的类型     | void*                                                                   |
-|           | 从 System.Runtime.InteropServices.CriticalHandle 派生的类型 | void*                                                                   |
-| bool      | System.Boolean                                              | Win32 BOOL 类型                                                         |
-| decimal   | System.Decimal                                              | COM DECIMAL 结构                                                        |
-|           | .NET 委托                                                   | 本机函数指针                                                            |
-|           | System.DateTime                                             | Win32 DATE 类型                                                         |
-|           | System.Guid                                                 | Win32 GUID 类型                                                         |
+| nint      | System.IntPtr                                               | intptr_t                                                                  |
+| nuint     | System.UIntPtr                                              | uintptr_t                                                                 |
+|           | .NET 指针类型（例如，void*）                                | void*                                                                     |
+|           | 从 System.Runtime.InteropServices.SafeHandle 派生的类型     | void*                                                                     |
+|           | 从 System.Runtime.InteropServices.CriticalHandle 派生的类型 | void*                                                                     |
+| bool      | System.Boolean                                              | Win32 BOOL 类型                                                           |
+| decimal   | System.Decimal                                              | COM DECIMAL 结构                                                          |
+|           | .NET 委托                                                   | 本机函数指针                                                              |
+|           | System.DateTime                                             | Win32 DATE 类型                                                           |
+|           | System.Guid                                                 | Win32 GUID 类型                                                           |
 
 *（引用来源：[类型封送 - .NET | Microsoft Learn](https://link.zhihu.com/?target=https%3A//learn.microsoft.com/zh-cn/dotnet/standard/native-interop/type-marshalling%23default-rules-for-marshalling-common-types)）*
 

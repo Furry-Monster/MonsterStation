@@ -1,8 +1,8 @@
 ---
 title: 游戏与影视工作流优化——Pipeline
 published: 2025-02-26
-description: ''
-image: ''
+description: 图形产业的业务pipeline
+image: ./cover.png
 tags: [游戏开发,PM]
 category: 技术杂文
 draft: false 

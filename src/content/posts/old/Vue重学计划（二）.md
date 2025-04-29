@@ -1,6 +1,7 @@
 ---
 title: Vue重学计划（二）
 published: 2024-10-07
+image: ./vue.png
 description:  第二期，我们从比较~~基础~~的部分入手，来做一个深入的认知
 tags: [Vue,前端,源码]
 category: Vue重学计划
