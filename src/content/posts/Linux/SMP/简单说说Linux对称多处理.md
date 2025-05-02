@@ -2,7 +2,7 @@
 title: 简单说说Linux对称多处理
 published: 2025-05-02
 description: 多处理器的神力...
-image: ''
+image: ./cover.png
 tags: [OS,Linux]
 category: Linux内核分析
 draft: false 
