@@ -2,7 +2,7 @@
 title: Linux内存地址空间
 published: 2025-05-04
 description: 缓存缓存的缓存，索引索引的索引
-image: ''
+image: ./sum.png
 tags: [OS,源码,Linux]
 category: Linux内核分析
 draft: false 
