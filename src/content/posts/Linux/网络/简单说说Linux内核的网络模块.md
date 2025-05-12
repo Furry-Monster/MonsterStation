@@ -1,7 +1,7 @@
 ---
 title: 简单说说Linux内核的网络模块
 published: 2025-05-12
-description: 实现【天涯若比邻】之梦
+description: 实现天涯若比邻之梦
 image: ./cover.png
 tags: [OS,源码,Linux]
 category: Linux内核分析
@@ -364,7 +364,7 @@ EXPORT_SYMBOL(sock_register);
 
 接下来，在**传输层**，网络协议栈从 Socket 发送缓冲区中取出 sk_buff，并按照 TCP/IP 协议栈从上到下逐层处理。
 
-如果使用的是 TCP 传输协议发送数据，那么先**拷贝一个新的 sk_buff 副本** ，这是因为 sk_buff 后续在调用网络层，最后到达网卡发送完成的时候，这个 sk_buff 会被释放掉。**而 TCP 协议是支持丢失重传的，在收到对方的 ACK 之前，这个 sk_buff 不能被删除**。所以内核的做法就是每次调用网卡发送的时候，实际上传递出去的是 sk_buff 的一个拷贝，等收到 ACK 再真正删除。 
+如果使用的是 TCP 传输协议发送数据，那么先**拷贝一个新的 sk_buff 副本** ，这是因为 sk_buff 后续在调用网络层，最后到达网卡发送完成的时候，这个 sk_buff 会被释放掉。**而 TCP 协议是支持丢失重传的，在收到对方的 ACK 之前，这个 sk_buff 不能被删除**。所以内核的做法就是每次调用网卡发送的时候，实际上传递出去的是 sk_buff 的一个拷贝，等收到 ACK 再真正删除。
 
 接着，对 sk_buff 填充 TCP 头。这里提一下，sk_buff 可以表示各个层的数据包，在应用层数据包叫 **data**，在 TCP 层我们称为 **segment**，在 IP 层我们叫 **packet**，在数据链路层称为 **frame**。（这里的命名来源于《自顶向下计算机网络》）
 
@@ -389,9 +389,11 @@ EXPORT_SYMBOL(sock_register);
 
 上面发送网络数据过程中，一共设计了3次内存拷贝
 
-1. 第一次，调用发送数据的系统调用的时候，内核会申请一个内核态的 sk_buff 内存，将用户待发送的数据拷贝到 `sk_buff` 内存，并将其加入到发送缓冲区。
-2. 第二次，在使用 TCP 传输协议的情况下，从传输层进入网络层的时候，每一个 `sk_buff` 都会被克隆一个新的副本出来。副本 `sk_buff` 会被送往网络层，等它发送完的时候就会释放掉，然后原始的 `sk_buff` 还保留在传输层，目的是为了实现 TCP 的可靠传输，等收到这个数据包的 ACK 时，才会释放原始的 `sk_buff `。
-3. 第三次，当 IP 层发现 `sk_buff` 大于 MTU 时才需要进行。会再申请额外的 `sk_buff`，并将原来的 `sk_buff` 拷贝为多个小的 `sk_buff`
+第一次，调用发送数据的系统调用的时候，内核会申请一个内核态的 sk_buff 内存，将用户待发送的数据拷贝到 `sk_buff` 内存，并将其加入到发送缓冲区。
+
+第二次，在使用 TCP 传输协议的情况下，从传输层进入网络层的时候，每一个 `sk_buff` 都会被克隆一个新的副本出来。副本 `sk_buff` 会被送往网络层，等它发送完的时候就会释放掉，然后原始的 `sk_buff` 还保留在传输层，目的是为了实现 TCP 的可靠传输，等收到这个数据包的 ACK 时，才会释放原始的 `sk_buff `。
+
+第三次，当 IP 层发现 `sk_buff` 大于 MTU 时才需要进行。会再申请额外的 `sk_buff`，并将原来的 `sk_buff` 拷贝为多个小的 `sk_buff`
 
 :::
 
@@ -541,4 +543,4 @@ void skb_set_mac_header(struct sk_buff *skb, const int offset);
 
 ![img](advance.png)
 
-![img]()
+![img](advance1.png)
