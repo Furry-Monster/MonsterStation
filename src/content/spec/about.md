@@ -13,8 +13,11 @@
 ::github{repo="Furry-Monster/TechCore-EnemyAI"}
 
 🔭 目前身份：学生
+
 🌱 正在学习：Unity/UE游戏开发，技术美术，Linux内核
+
 🤔 未来计划：简单学下GAMES104。
+
 💬 技术交流：对图形学、游戏开发、前端开发、Linux相关技术更感兴趣
 
 ## 🛠️ 技术栈
