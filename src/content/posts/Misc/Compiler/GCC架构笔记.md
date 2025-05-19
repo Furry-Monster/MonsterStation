@@ -1,8 +1,8 @@
 ---
-title: GCC or LLVM? 编译器入门
+title: Compiler入门笔记
 published: 2025-05-19
 description: 参考孙孟越大神博客的一篇学习笔记
-image: './cover.png'
+image: ./cover.png
 tags: [编译器]
 category: 技术杂文
 draft: false 
