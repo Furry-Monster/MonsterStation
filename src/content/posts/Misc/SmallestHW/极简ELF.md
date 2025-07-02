@@ -3,7 +3,7 @@ title: 怎么写一个世界上最小的HelloWorld.elf
 published: 2025-06-06
 description: 小小的也很可爱～
 image: ./cover.png
-tags: [OS,编译器,Geek]
+tags: [OS,汇编,编译器,Geek]
 category: 技术杂文
 draft: false 
 lang: ''
@@ -23,12 +23,12 @@ Linux上一个可执行的 Hello World ELF文件，到底可以有多小？
 当然，优化的前提是已经有了现成的代码，我们不可能对着空气一顿输出。干脆发挥一下自己的主观能动性，write a shit first!
 
 ```c
-#include <stdio.h>      
-int main()              
-{                       
+#include <stdio.h>    
+int main()            
+{                     
   printf("Hello World!\n"); 
-  return 0;             
-}                       
+  return 0;           
+}                     
 
 ```
 
@@ -91,11 +91,11 @@ ummm，为了优化掉libc库，我们需要一些更加精进的知识，在此
 使用 <unistd.h> 提供 write 和 _exit 的声明。去掉 stdio.h 和 printf，减少依赖，用write来替代printf，用exit来优化掉return
 
 ```c
-#include <unistd.h>                  
-int main() {                         
+#include <unistd.h>                
+int main() {                       
     write(1, "Hello, World!\n", 14); 
-    _exit(0);                
-}                                    
+    _exit(0);              
+}                                  
 
 ```
 
