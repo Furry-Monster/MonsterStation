@@ -3,7 +3,7 @@ title: 简单说说Linux内核的网络模块
 published: 2025-05-12
 description: 实现天涯若比邻之梦
 image: ./cover.png
-tags: [OS,源码,Linux]
+tags: [OS,源码,网络,Linux]
 category: Linux内核分析
 draft: false 
 lang: ''
