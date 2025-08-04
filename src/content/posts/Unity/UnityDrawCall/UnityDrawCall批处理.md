@@ -1,13 +1,14 @@
 ---
-title: UnityDrawCall批处理（生肉转载）
+title: UnityDrawCall批处理
 published: 2025-08-04
-description: This is an in-depth post, make yourself comfortable and grab a tea. Use the table of contents if you’re in a rush.
+description: 深入探索UnityDrawCall
 image: ./cover.png
 tags: [Unity,游戏开发,性能优化]
 category: Unity笔记
 draft: false 
 lang: en
 ---
+
 Draw calls are never a problem. That is, until you add one more element and suddenly your render thread becomes your new bottleneck. Can you guess why keeping **Unity draw calls** at bay is today more relevant than ever?
 
 Table of Content :
@@ -172,7 +173,7 @@ I have **systems** in place that report me these numbers automatically. When som
 **Monitoring unity draw calls** is now more important than ever with **Virtual Reality** gaining so much traction. We have to render at consistent frame-rates of 72, 90 or even 144 Hz. Those timings don’t give you a substantial CPU budget.
 
 
-![]()![](https://thegamedev.guru/static/e770dbbb23b12a220c3af45676d93260/58556/rube-quote-vr.webp)
+![](https://thegamedev.guru/static/e770dbbb23b12a220c3af45676d93260/58556/rube-quote-vr.webp)
 
 ## Signs You Have Too Many Draw Calls
 
@@ -220,7 +221,7 @@ So I kept buying it.
 
 If you’re targeting a **VR** headset, you should especially optimize for energy efficiency. That is, unless you’re developing an application to replace a conventional face tanner.
 
-![]()![](https://thegamedev.guru/static/bec58091a44202cf5d79dd70e8ac21a4/99238/Old-Counter-Strike-Terrorist.webp)
+![](https://thegamedev.guru/static/bec58091a44202cf5d79dd70e8ac21a4/99238/Old-Counter-Strike-Terrorist.webp)
 
 ### Soft Sign: Game-Play Not Running Smoothly
 
@@ -248,7 +249,7 @@ Now, low performance could happen for multiple reasons, but a high amount of uni
 
 I remember the early days of Counter Strike where people with the beefiest GPUs threw smoke grenades to gain an unfair advantage. Players with low-end computers couldn’t really handle smoke that well, so they ended up dying of low frame-rate. This was probably more due to overdraw than draw-calls, but I still find it memorable to mention.
 
-![]()![](https://thegamedev.guru/static/c5573d75079b72dac9050313255ec0f9/ad85c/decoration-sick-VR.webp)
+![](https://thegamedev.guru/static/c5573d75079b72dac9050313255ec0f9/ad85c/decoration-sick-VR.webp)
 
 ### Soft-Sign: VR Users Look Paler Than Ever
 
@@ -260,7 +261,7 @@ The more potential draw calls you have, the worse your worst case becomes.
 
 Yeah, that’s better.
 
-![]()![](https://thegamedev.guru/static/5272e8dc1b24326f649369dd912ad67e/58556/ruben-quote-3.webp)
+![](https://thegamedev.guru/static/5272e8dc1b24326f649369dd912ad67e/58556/ruben-quote-3.webp)
 
 ### Hard Sign: Unity Profiler Reveals a Render Thread Bottleneck
 
@@ -270,7 +271,7 @@ Your main thread is probably just idling around while the render thread finishes
 
 You can identify this situation through the Unity Profiler, as seen below.
 
-![]()![](https://thegamedev.guru/static/7dda2369080d4af1d8f0ccff4d808140/c8ef7/Unity-Draw-Calls-RenderThread-Expensive.webp)
+![](https://thegamedev.guru/static/7dda2369080d4af1d8f0ccff4d808140/c8ef7/Unity-Draw-Calls-RenderThread-Expensive.webp)
 
 Unity Draw Calls: Expensive Render Thread
 
@@ -367,7 +368,7 @@ You can access the **stats window** any time by clicking on the *Stats* button o
 
 There, pay attention to Batches (draw calls) and SetPasses (material changes). As we saw, these are connected but have a different performance impact profile.
 
-![]()![](https://thegamedev.guru/static/b5b93fba1cf4cfe0d3c9620a9b2911ff/0ed73/Unity-Draw-Calls-Stats-Window.webp)
+![](https://thegamedev.guru/static/b5b93fba1cf4cfe0d3c9620a9b2911ff/0ed73/Unity-Draw-Calls-Stats-Window.webp)
 
 Unity Performance Stats Window
 
@@ -397,7 +398,7 @@ As we said, most assets will use different materials by default. But worry no fu
 
 Below there’s a flowchart diagram that summarizes the options you have for batching in Unity.
 
-![]()![](https://thegamedev.guru/static/f0c8c94fefec839f7543d57be4d05cc4/c935f/Unity-Draw-Call-Reduction-Diagram-1.webp)
+![](https://thegamedev.guru/static/f0c8c94fefec839f7543d57be4d05cc4/c935f/Unity-Draw-Call-Reduction-Diagram-1.webp)
 
 Unity Draw Call Reduction: The Guru’s Batching Diagram
 
@@ -486,7 +487,7 @@ Then static batching creates a single draw call out of them:
 
 * *Draw the static dining furniture (containing 2 chairs and a table).*
 
-![]()![](https://thegamedev.guru/static/caca7288b9933193046ad8eada04882f/cf365/Unity-Draw-Call-Batching-Settings.webp)
+![](https://thegamedev.guru/static/caca7288b9933193046ad8eada04882f/cf365/Unity-Draw-Call-Batching-Settings.webp)
 
 Unity Draw Call Batching Settings
 
@@ -530,7 +531,7 @@ Then with GPU instancing we convert them to a single draw call:
 
 This is a setting you activate per material, as seen below.
 
-![]()![](https://thegamedev.guru/static/dc9f3f6e34e05bb861082a6a2422f958/dcb48/Unity-Draw-Call-Batching-GPU-Instancing-Material.webp)
+![](https://thegamedev.guru/static/dc9f3f6e34e05bb861082a6a2422f958/dcb48/Unity-Draw-Call-Batching-GPU-Instancing-Material.webp)
 
 Unity GPU Instancing: Material Settings
 
@@ -596,7 +597,7 @@ I simplified the explanation for both functions. Check the documentation for det
 
 In the image below, you see how I applied the power of the **StaticBatchingUtility** API to batch a few dynamic tanks into a single static batch. And I do this in run-time.
 
-![]()![](https://thegamedev.guru/static/c3839374855d2a18387c26c5bfceb9d0/e30b5/Unity-Draw-Calls-Manual-Batching.webp)
+![](https://thegamedev.guru/static/c3839374855d2a18387c26c5bfceb9d0/e30b5/Unity-Draw-Calls-Manual-Batching.webp)
 
 Unity Draw Calls: Manual Batching With StaticBatchingUtility.Combine
 
