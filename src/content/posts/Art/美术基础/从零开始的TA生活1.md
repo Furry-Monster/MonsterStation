@@ -1,6 +1,6 @@
 ---
 title: 从零开始的TA生活(美术篇)——原画美术基础
-published: 2025-08-04
+published: 2025-07-28
 description: 做有品位的程序员
 image: ./cover.png
 tags: [原画,TA]

@@ -1,5 +1,5 @@
 ---
-title: UnityDrawCall批处理
+title: UnityDrawCall批处理(生肉)
 published: 2025-08-04
 description: 深入探索UnityDrawCall
 image: ./cover.png
@@ -8,7 +8,6 @@ category: Unity笔记
 draft: false 
 lang: en
 ---
-
 Draw calls are never a problem. That is, until you add one more element and suddenly your render thread becomes your new bottleneck. Can you guess why keeping **Unity draw calls** at bay is today more relevant than ever?
 
 Table of Content :
@@ -171,7 +170,6 @@ But I don’t do this alone.
 I have **systems** in place that report me these numbers automatically. When something is off, I go and investigate.
 
 **Monitoring unity draw calls** is now more important than ever with **Virtual Reality** gaining so much traction. We have to render at consistent frame-rates of 72, 90 or even 144 Hz. Those timings don’t give you a substantial CPU budget.
-
 
 ![](https://thegamedev.guru/static/e770dbbb23b12a220c3af45676d93260/58556/rube-quote-vr.webp)
 
