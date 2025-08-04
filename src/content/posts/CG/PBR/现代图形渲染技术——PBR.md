@@ -3,7 +3,7 @@ title: 现代图形渲染技术——PBR
 published: 2025-06-02
 description: 把光照带入近似的物理世界
 image: ./result.png
-tags: [图形学,渲染,数学]
+tags: [图形学,渲染,数学,PBR]
 category: CG
 draft: false 
 lang: ''
@@ -353,7 +353,7 @@ float GeometrySmith(vec3 N, vec3 V, vec3 L, float roughness);
 vec3 fresnelSchlickRoughness(float cosTheta, vec3 F0, float roughness);
 
 void main()
-{     
+{   
     vec3 N = normalize(Normal);
     vec3 V = normalize(camPos - WorldPos);
 
@@ -369,12 +369,12 @@ void main()
         vec3 H = normalize(V + L);
         float distance    = length(lightPositions[i] - WorldPos);
         float attenuation = 1.0 / (distance * distance);
-        vec3 radiance     = lightColors[i] * attenuation;      
+        vec3 radiance     = lightColors[i] * attenuation;    
 
         // cook-torrance brdf
-        float NDF = DistributionGGX(N, H, roughness);      
-        float G   = GeometrySmith(N, V, L, roughness);    
-        vec3 F    = fresnelSchlick(max(dot(H, V), 0.0), F0);     
+        float NDF = DistributionGGX(N, H, roughness);    
+        float G   = GeometrySmith(N, V, L, roughness);  
+        vec3 F    = fresnelSchlick(max(dot(H, V), 0.0), F0);   
 
         vec3 kS = F;
         vec3 kD = vec3(1.0) - kS;
@@ -385,7 +385,7 @@ void main()
         vec3 specular     = nominator / denominator;
 
         // add to outgoing radiance Lo
-        float NdotL = max(dot(N, L), 0.0);              
+        float NdotL = max(dot(N, L), 0.0);            
         Lo += (kD * albedo / PI + specular) * radiance * NdotL; 
     }   
 

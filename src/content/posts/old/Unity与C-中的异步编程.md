@@ -4,7 +4,7 @@ published: 2025-01-29
 image: ./unity.png
 description:  我再也不和大佬玩抽象了
 tags: [Unity,游戏开发,CSharp]
-category: 技术杂文
+category: Unity笔记
 draft: false
 ---
 参考文章：
