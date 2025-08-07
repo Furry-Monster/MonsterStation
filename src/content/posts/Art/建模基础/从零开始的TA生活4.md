@@ -1,6 +1,6 @@
 ---
 title: 从零开始的TA生活(美术篇)——建模基础
-published: 2025-07-28
+published: 2025-08-06
 description: 建模也要有工作流
 image: ./cover.png
 tags: [建模,DCC,TA]
