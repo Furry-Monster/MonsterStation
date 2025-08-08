@@ -18,7 +18,7 @@ lang: ''
 
 ![img](0.png)
 
-![]()![](1.gif)
+![](1.gif)
 
 ### 蒙皮Skinning
 
