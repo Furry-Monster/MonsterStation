@@ -1,14 +1,13 @@
 ---
-title: 关于周期字符串问题的心得总结——KMP、双倍字符串
+title: 周期字符串总结:KMP、双倍字符串
 published: 2023-12-21
 description: 浅陋的总结，望大佬们指正。
-image: cover.png
+image: ./cover.png
 tags: [算法]
 category: 技术杂文
 draft: false 
 lang: ''
 ---
-
 以下的一些心得体会参考或部分引用了如下资料：
 
     “春水煎茶”个人博客：[https://writings.sh/post/algorithm-repeated-string-pattern](https://leetcode.cn/link/?target=https%3A%2F%2Fwritings.sh%2Fpost%2Falgorithm-repeated-string-pattern "https://writings.sh/post/algorithm-repeated-string-pattern")
