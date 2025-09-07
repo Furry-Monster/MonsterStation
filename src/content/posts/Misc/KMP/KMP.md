@@ -118,7 +118,7 @@ s.size() % (s.size() - (next[s.size() - 1] + 1)) ==0
 
 事实上，这是一个结论：
 
-`命题A<strong>“</strong><strong>s</strong>`** 是周期串”** ![\Leftrightarrow](https://latex.csdn.net/eq?%5CLeftrightarrow)命题B**“`len(s)` 是 `len(q)-len(c)` 的倍数”**
+命题A"s是周期串" <===> 命题B“len(s)是 len(q)-len(c)的倍数”
 
 这个结论的严谨证明可以参考春水煎茶大佬的博客，里面由图像和文字的描述。这里我简单说明一下我自己的一些理解。
 
