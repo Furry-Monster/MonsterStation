@@ -8,17 +8,17 @@ category: 现代C++
 draft: false 
 lang: ''
 ---
-:::note
-
-博客大部分内容引自C++ 之父 Bjarne Stroustrup 的 C++ 之旅（A Tour of C++）一书的第 13 章 Concurrency。中间夹杂了一些我自己的思考。
-
-:::
-
 传统的C++中并没有引入线程这个概念，在C++11出来之前，如果我们想要在C++中实现多线程，需要借助操作系统平台提供的API，比如Linux的 `pthread.h`，或者windows下的 `windows.h` 。
 
 C++11提供了语言层面上的多线程，包含在头文件 `<thread>`中。它解决了跨平台的问题，提供了管理线程、保护共享数据、线程间同步操作、原子操作等类。C++11 新标准中引入了5个头文件来支持多线程编程，如下图所示：
 
 ![img](1.png)
+
+:::note
+
+博客大部分内容引自C++ 之父 Bjarne Stroustrup 的 C++ 之旅（A Tour of C++）一书的第 13 章 Concurrency。中间夹杂了一些我自己的思考。
+
+:::
 
 ## 介绍
 
@@ -233,9 +233,9 @@ cout << duration_cast<nanoseconds>(t1-t0).count() << " nanoseconds passed\n";
 
 `condition_variable` 提供了对通过外部事件通信的支持，允许一个线程等待另一个线程，比如等待另一个线程（完成某个工作，然后）触发一个事件/条件。
 
-`condition_variable`头文件有两个variable类，一个是`condition_variable`，另一个是`condition_variable_any`。`condition_variable`必须结合`unique_lock`使用。`condition_variable_any`可以使用任何的锁。下面以`condition_variable`为例进行介绍。
+`condition_variable`头文件有两个variable类，一个是 `condition_variable`，另一个是 `condition_variable_any`。`condition_variable`必须结合 `unique_lock`使用。`condition_variable_any`可以使用任何的锁。下面以 `condition_variable`为例进行介绍。
 
-`condition_variable`条件变量可以阻塞（`wait`、`wait_for`、`wait_until`）调用的线程直到使用（`notify_one`或`notify_all`）通知恢复为止。`condition_variable`是一个类，这个类既有构造函数也有析构函数，使用时需要构造对应的`condition_variable`对象，调用对象相应的函数来实现上面的功能。
+`condition_variable`条件变量可以阻塞（`wait`、`wait_for`、`wait_until`）调用的线程直到使用（`notify_one`或 `notify_all`）通知恢复为止。`condition_variable`是一个类，这个类既有构造函数也有析构函数，使用时需要构造对应的 `condition_variable`对象，调用对象相应的函数来实现上面的功能。
 
 | 类型               | 说明                                                                                   |
 | ------------------ | -------------------------------------------------------------------------------------- |
