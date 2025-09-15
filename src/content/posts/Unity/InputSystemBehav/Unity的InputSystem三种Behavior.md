@@ -1,7 +1,7 @@
 ---
 title: Unity的InputSystem三种Behavior
 published: 2025-01-20
-image: ./unity.png
+image: ./cover.png
 description:  Unity的InputSystem提供了三种Behavior，分别是Send / Broadcast Messages、Invoke CSharp Events、Invoke Unity Events。本文将对这三种Behavior进行详细的介绍。
 tags: [Unity,游戏开发]
 category: Unity笔记

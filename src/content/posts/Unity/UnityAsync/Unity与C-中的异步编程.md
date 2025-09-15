@@ -1,7 +1,7 @@
 ---
 title: Unity与C#中的异步编程
 published: 2025-01-29
-image: ./unity.png
+image: ./cover.png
 description:  我再也不和大佬玩抽象了
 tags: [Unity,游戏开发,CSharp]
 category: Unity笔记
