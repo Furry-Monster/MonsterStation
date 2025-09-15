@@ -177,7 +177,7 @@ withDefaults(defineProps<Props>(), {
 
 1. 子组件通过emit暴露事件
 
-```type
+```typescript
 <template>
     <div class="menu">
         <button @click="clickTap">派发给父组件</button>
