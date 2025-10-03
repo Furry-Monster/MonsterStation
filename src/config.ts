@@ -99,8 +99,8 @@ export const profileConfig: ProfileConfig = {
 };
 
 export const friendsConfig: FriendsConfig = {
-  title: "友情链接",
-  description: "欢迎交换友链！请通过邮件或其他方式联系我。",
+  title: "看看大伙在做什么~",
+  description: "欢迎交换友链！请通过邮件(4urrym0nster@gmail.com)或其他方式联系我。",
   links: [
     {
       name: "示例友链",
