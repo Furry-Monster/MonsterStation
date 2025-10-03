@@ -1,4 +1,5 @@
 import type {
+  FriendsConfig,
   LicenseConfig,
   NavBarConfig,
   ProfileConfig,
@@ -20,7 +21,7 @@ export const siteConfig: SiteConfig = {
     position: "top", // Equivalent to object-position, only supports 'top', 'center', 'bottom'. 'center' by default
     credit: {
       enable: true, // Display the credit text of the banner image
-      text: "不知道是哪个画师太太的图", // Credit text to be displayed
+      text: "夸父伟大...", // Credit text to be displayed
       url: "", // (Optional) URL link to the original artwork or artist's page
     },
   },
@@ -48,6 +49,7 @@ export const navBarConfig: NavBarConfig = {
     LinkPreset.Home,
     LinkPreset.Archive,
     LinkPreset.About,
+    LinkPreset.Friends,
     {
       name: "GitHub",
       url: "https://github.com/Furry-Monster", // Internal links should not include the base path, as it is automatically added
@@ -96,8 +98,23 @@ export const profileConfig: ProfileConfig = {
   ],
 };
 
+export const friendsConfig: FriendsConfig = {
+  title: "友情链接",
+  description: "欢迎交换友链！请通过邮件或其他方式联系我。",
+  links: [
+    {
+      name: "示例友链",
+      url: "https://example.com",
+      description: "这是一个示例友链",
+      avatar: "https://via.placeholder.com/64",
+    },
+    // More Friends link added here
+  ],
+};
+
 export const licenseConfig: LicenseConfig = {
   enable: true,
   name: "CC BY-NC-SA 4.0",
   url: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
 };
+

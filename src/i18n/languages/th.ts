@@ -5,6 +5,7 @@ export const th: Translation = {
   [Key.home]: 'หน้าแรก',
   [Key.about]: 'เกี่ยวกับ',
   [Key.archive]: 'คลัง',
+  [Key.friends]: 'ลิงค์ที่เป็นมิตร',
   [Key.search]: 'ค้นหา',
 
   [Key.tags]: 'ป้ายกำกับ',
