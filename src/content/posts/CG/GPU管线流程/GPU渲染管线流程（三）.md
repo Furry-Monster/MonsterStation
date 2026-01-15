@@ -1,5 +1,5 @@
 ---
-title: GPU渲染管线流程（三）
+title: 图形学基础——GPU渲染管线流程（三）
 published: 2025-04-15
 description: 简单记录一下几个月的图形学重点知识，这次用自己的话说说图形渲染管线~
 image: './cover3.png'

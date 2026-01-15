@@ -1,5 +1,5 @@
 ---
-title: 现代图形渲染技术——PBR技术概览
+title: 图形学基础——PBR技术概览
 published: 2025-06-02
 description: 把光照带入近似的物理世界
 image: ./result.png
@@ -387,7 +387,7 @@ void main()
         vec3 specular     = nominator / denominator;
 
         // add to outgoing radiance Lo
-        float NdotL = max(dot(N, L), 0.0);        
+        float NdotL = max(dot(N, L), 0.0);      
         Lo += (kD * albedo / PI + specular) * radiance * NdotL; 
     }   
 
