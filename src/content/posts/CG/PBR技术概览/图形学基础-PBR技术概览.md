@@ -1,5 +1,5 @@
 ---
-title: 现代图形渲染技术——PBR
+title: 现代图形渲染技术——PBR技术概览
 published: 2025-06-02
 description: 把光照带入近似的物理世界
 image: ./result.png
@@ -56,7 +56,9 @@ lang: ''
 
 在微观尺度下，没有任何平面是完全光滑的。然而由于这些微平面已经微小到无法逐像素地继续对其进行区分，因此我们假设一个粗糙度(Roughness)参数，然后用统计学的方法来估计微平面的粗糙程度。我们可以基于一个平面的粗糙度来计算出众多微平面中，朝向方向沿着某个向量**h**方向的比例。这个向量**h**便是位于光线向量**l**和视线向量**v**之间的半程向量(Halfway Vector)。
 
-![img](halfway.png)
+$$
+h = \frac{l + v}{\|l + v\|}
+$$
 
 微平面的朝向方向与半程向量的方向越是一致，镜面反射的效果就越是强烈越是锐利。通过使用一个介于0到1之间的粗糙度参数，我们就能概略地估算微平面的取向情况了：
 
@@ -369,10 +371,10 @@ void main()
         vec3 H = normalize(V + L);
         float distance    = length(lightPositions[i] - WorldPos);
         float attenuation = 1.0 / (distance * distance);
-        vec3 radiance     = lightColors[i] * attenuation;    
+        vec3 radiance     = lightColors[i] * attenuation;  
 
         // cook-torrance brdf
-        float NDF = DistributionGGX(N, H, roughness);    
+        float NDF = DistributionGGX(N, H, roughness);  
         float G   = GeometrySmith(N, V, L, roughness);  
         vec3 F    = fresnelSchlick(max(dot(H, V), 0.0), F0);   
 
@@ -385,7 +387,7 @@ void main()
         vec3 specular     = nominator / denominator;
 
         // add to outgoing radiance Lo
-        float NdotL = max(dot(N, L), 0.0);            
+        float NdotL = max(dot(N, L), 0.0);        
         Lo += (kD * albedo / PI + specular) * radiance * NdotL; 
     }   
 
