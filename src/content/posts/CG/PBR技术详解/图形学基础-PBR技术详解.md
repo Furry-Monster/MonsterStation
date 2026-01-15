@@ -338,7 +338,7 @@ $$
 
 *Physically Based Rendering, Second Edition* 里关于 $d\omega_h$ 和 $d\omega_o$ 关系的推导（在 14.5.1 节）预设了一个前提：$\theta_i = 2\theta_h$，可这会导致 $\theta_i$ 和 $\theta_h$ 的定义和前面推导过程中的定义不一致。而 Torrance-Sparrow 论文里 $d\omega_o$ 和 $d\omega_h$ 的关系直接引用自一篇付费论文，没有推导。
 
-不过 《*Surface Reflection: Physical and Geometrical Perspectives》* 给出了一个直观的非正式推导，《*An Illumination Model for a Skin Layer Bounded by Rough Surfaces》* 附录 B 给出了详细的数学计算过程。我们来看看前者。
+不过 *《Surface Reflection: Physical and Geometrical Perspectives》* 给出了一个直观的非正式推导，*《An Illumination Model for a Skin Layer Bounded by Rough Surfaces》* 附录 B 给出了详细的数学计算过程。我们来看看前者。
 
 ![img](ref_pic.png)
 
