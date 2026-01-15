@@ -1,6 +1,6 @@
 ---
 title: 图形学基础——PBR技术详解
-published: 2025-01-15
+published: 2026-01-15
 description: 内含部分数学推导，耐心看完
 image: ./cover.png
 tags: [图形学,渲染,数学,PBR,光照]
