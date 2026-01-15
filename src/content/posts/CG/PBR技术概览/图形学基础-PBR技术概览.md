@@ -3,7 +3,7 @@ title: 现代图形渲染技术——PBR技术概览
 published: 2025-06-02
 description: 把光照带入近似的物理世界
 image: ./result.png
-tags: [图形学,渲染,数学,PBR]
+tags: [图形学,渲染,数学,PBR,光照]
 category: CG
 draft: false 
 lang: ''
