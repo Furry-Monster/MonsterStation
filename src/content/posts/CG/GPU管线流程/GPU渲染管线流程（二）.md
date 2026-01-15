@@ -1,10 +1,10 @@
 ---
-title: 渲染管线流程（二）
+title: GPU渲染管线流程（二）
 published: 2025-04-14
 description: 简单记录一下几个月的图形学重点知识，这次用自己的话说说图形渲染管线~
 image: './cover2.png'
-tags: [图形学,渲染,管线]
-category: 渲染管线流程
+tags: [图形学,渲染,管线,GPU]
+category: GPU渲染管线流程
 draft: false 
 lang: ''
 ---
