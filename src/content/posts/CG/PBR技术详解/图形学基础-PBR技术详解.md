@@ -401,6 +401,12 @@ $$
 
 ![img](brdf.png)
 
+## 下一步的资料
+
+上面的推导比较简略，更详细的推导，这里我推荐一篇文章：
+
+[完整推导PBR-IBL](https://zrephel.fun/2025/06/06/%E5%AE%8C%E6%95%B4%E6%8E%A8%E5%AF%BCPBR-IBL/)
+
 # 实际应用
 
 ## BxDF 与 BRDF的分类
