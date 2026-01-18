@@ -1,5 +1,5 @@
 ---
-title: 图形学基础-次表面散射与BSSRDF
+title: 图形学基础——次表面散射与BSSRDF
 published: 2026-01-18
 description: 次表面散射的原理和应用
 image: ./cover.png
@@ -141,7 +141,7 @@ $$
 
 这种方法只模拟了多次散射，而忽略的直接散射/单次散射，如果需要得到直接散射的结果，则要单独用Ray Marching的方法求解。
 
-![img]()
+![img](demo0.png)
 
 ### Normalized Diffusion
 
