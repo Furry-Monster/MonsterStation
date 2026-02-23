@@ -1,49 +1,74 @@
-# 👋 你好，这里是 FurryMonster
 
-[![Typing SVG](https://camo.githubusercontent.com/dea63d87c29ac3b2ec83bc24edcfc7c8267ddec16c8ed2f6857d60b5a9ad120a/68747470733a2f2f726561646d652d747970696e672d7376672e6865726f6b756170702e636f6d3f666f6e743d466972612b436f64652673697a653d31382670617573653d3130303026636f6c6f723d3534413646462663656e7465723d74727565267643656e7465723d74727565266d756c74696c696e653d747275652677696474683d363030266865696768743d313030266c696e65733d436f64652b61732b616e2b4172746973742532432b4c6976652b61732b612b447265616d65723b254537253934254138254538253839254241254536253943254146254535254145254236254537253941253834254536253936254239254535254243253846254535253836253939254534254242254133254537254130253831254546254243253843254537253934254138254536254132254136254536253833254233254535254145254236254537253941253834254536253936254239254535254243253846254537253934253946254536254234254242)](https://camo.githubusercontent.com/dea63d87c29ac3b2ec83bc24edcfc7c8267ddec16c8ed2f6857d60b5a9ad120a/68747470733a2f2f726561646d652d747970696e672d7376672e6865726f6b756170702e636f6d3f666f6e743d466972612b436f64652673697a653d31382670617573653d3130303026636f6c6f723d3534413646462663656e7465723d74727565267643656e7465723d74727565266d756c74696c696e653d747275652677696474683d363030266865696768743d313030266c696e65733d436f64652b61732b616e2b4172746973742532432b4c6976652b61732b612b447265616d65723b254537253934254138254538253839254241254536253943254146254535254145254236254537253941253834254536253936254239254535254243253846254535253836253939254534254242254133254537254130253831254546254243253843254537253934254138254536254132254136254536253833254233254535254145254236254537253941253834254536253936254239254535254243253846254537253934253946254536254234254242)
+<div align="center">
 
-## 🎯 关于我
+# FurryMonster
 
-[AnomalousCoffeeMachine](https://www.patreon.com/c/horubrain/home) 合作开发者，Unity/UE爱好者。
+[![GitHub](https://raw.githubusercontent.com/Furry-Monster/Furry-Monster/output/github-followers.svg)](https://github.com/Furry-Monster)
 
-~什么都会一点，广度优先学习受害者~
+</div>
 
-最近正在做的项目（Realm渲染引擎）：
+---
 
-::github{repo="Furry-Monster/Realm"}
+## About
 
-🔭 目前身份：学生
+Student. Focused on graphics, game dev, frontend & Linux.
 
-🌱 正在学习：Unity/UE游戏开发，技术美术，Linux内核
+- Current: Unity/UE developer, Technical artist(rendering & PCG mainly), Linux kernel enthusiast.
+- Planned: Build my first progressive game engine.
+- [Blog](https://monsterstation.netlify.app/about/)
 
-🤔 未来计划： 整个丐版Nanite。
+## Stack
 
-💬 技术交流：对图形学、游戏开发、前端开发、Linux相关技术更感兴趣
+<div align="center">
 
-## 🛠️ 技术栈
+<img src="https://img.shields.io/badge/-C%23-239120?style=flat-square&logo=c-sharp&logoColor=white" alt="C#" />
+<img src="https://img.shields.io/badge/-C%2B%2B-00599C?style=flat-square&logo=c%2B%2B&logoColor=white" alt="C++" />
+<img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+<img src="https://img.shields.io/badge/-Dart-0175C2?style=flat-square&logo=dart&logoColor=white" alt="Dart" />
+<br/>
 
-编程语言：C/C++ C# Python
+<img src="https://img.shields.io/badge/-Unity-000000?style=flat-square&logo=unity&logoColor=white" alt="Unity" />
+<img src="https://img.shields.io/badge/-Unreal%20Engine-313131?style=flat-square&logo=unreal-engine&logoColor=white" alt="Unreal" />
+<br/>
 
-游戏开发：Unity UE5
+<img src="https://img.shields.io/badge/-Flutter-02569B?style=flat-square&logo=flutter&logoColor=white" alt="Flutter" />
+<img src="https://img.shields.io/badge/-Vue-4FC08D?style=flat-square&logo=vue.js&logoColor=white" alt="Vue" />
+<img src="https://img.shields.io/badge/-Avalonia-8322D1?style=flat-square&logo=avalonia&logoColor=white" alt="Avalonia" />
+<br/>
 
-游戏相关：Unity游戏模组开发
+<img src="https://img.shields.io/badge/-Git-F05032?style=flat-square&logo=git&logoColor=white" alt="Git" />
+<img src="https://img.shields.io/badge/-Linux-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Linux" />
+<img src="https://img.shields.io/badge/-Docker-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker" />
+<img src="https://img.shields.io/badge/-Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter" />
 
-逆向工程：游戏脚本 游戏解包
+</div>
 
-## 🏆 个人成就
+---
 
-[![trophy](https://camo.githubusercontent.com/9193c29ce09bb68072955b10eadf611aa7f750d12ce5aec18b28de2db7d6dd42/68747470733a2f2f6769746875622d70726f66696c652d74726f7068792e76657263656c2e6170702f3f757365726e616d653d46757272792d4d6f6e73746572267468656d653d6f6e656461726b26726f773d3126636f6c756d6e3d37)](https://github.com/Furry-Monster)
+<div align="center">
 
-## 📫 联系我
+## Stats
 
-* GMail: [4urrym0nster@gmail.com](mailto:4urrym0nster@gmail.com)
-* Github: [https://github.com/Furry-Monster](https://github.com/Furry-Monster)
+<img height="137" src="https://raw.githubusercontent.com/Furry-Monster/Furry-Monster/output/stats.svg" alt="stats" />
+<img height="137" src="https://raw.githubusercontent.com/Furry-Monster/Furry-Monster/output/top-langs.svg" alt="top langs" />
 
-参考以下内容触发我的NPC闲聊事件：
+<img src="https://raw.githubusercontent.com/Furry-Monster/Furry-Monster/output/activity-graph.svg" width="100%" alt="activity" />
 
-- 游戏（恐怖游戏/独立游戏）
-- 音乐（电子编曲/钢琴）
-- 咖啡（No Americano plz）
-- ACG（EVA/Re0）
+## Contribution snake
 
-⭐️ From [Furry-Monster](https://github.com/Furry-Monster)
+<picture>
+  <source srcset="https://raw.githubusercontent.com/Furry-Monster/Furry-Monster/output/github-contribution-grid-snake-dark.svg" media="(prefers-color-scheme: dark)" />
+  <img src="https://raw.githubusercontent.com/Furry-Monster/Furry-Monster/output/github-contribution-grid-snake.svg" width="100%" alt="contribution snake" />
+</picture>
+
+</div>
+
+---
+
+## Contact · Interests
+
+[Gmail](mailto:4urrym0nster@gmail.com) · [Blog](https://monsterstation.netlify.app/about/) · [Twitter](https://twitter.com/Furry_Monster_) · [Discord](https://discord.com/users/1314183151353987094) · [Bilibili](https://space.bilibili.com/199684075)
+
+Hobby: Games (horror, indie), music (electronic, jpop), coffee, ACG (Oshi No Ko, Re:Zero)
+
+---
