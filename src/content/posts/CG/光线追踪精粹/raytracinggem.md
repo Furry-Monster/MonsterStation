@@ -1,6 +1,6 @@
 ---
-title: 光线追踪精粹笔记(个人整理后)
-published: 2026-02-28
+title: 《光线追踪精粹》笔记(个人整理后)
+published: 2026-02-07
 description: RTX ON!(是不是说过一次...)
 image: ./cover.png
 tags: [图形学,渲染,数学,光照,Raytracing]
