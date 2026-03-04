@@ -1,5 +1,6 @@
 import type {
   FriendsConfig,
+  GiscusConfig,
   LicenseConfig,
   NavBarConfig,
   ProfileConfig,
@@ -110,5 +111,18 @@ export const licenseConfig: LicenseConfig = {
   enable: true,
   name: "CC BY-NC-SA 4.0",
   url: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+};
+
+export const giscusConfig: GiscusConfig = {
+  enable: true,
+  repo: "Furry-Monster/MonsterStation",
+  repoId: "R_kgDON5nU-A",
+  category: "Comments",
+  categoryId: "DIC_kwDON5nU-M4C3qDU",
+  mapping: "pathname",
+  lang: "zh-CN",
+  reactionsEnabled: true,
+  emitMetadata: false,
+  inputPosition: "top",
 };
 
