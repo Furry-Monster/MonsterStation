@@ -5,7 +5,10 @@ export const ko: Translation = {
   [Key.home]: '홈',
   [Key.about]: '소개',
   [Key.archive]: '아카이브',
-  [Key.friends]:'친절한 링크',
+  [Key.friends]: '친구 링크',
+  [Key.visitSite]: '사이트 방문',
+  [Key.noFriends]: '아직 친구 링크가 없습니다',
+  [Key.noFriendsHint]: '링크 교환을 환영합니다!',
   [Key.search]: '검색',
 
   [Key.tags]: '태그',

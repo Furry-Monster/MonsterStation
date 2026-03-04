@@ -1,0 +1,67 @@
+---
+import type { FriendLink } from "../types/config";
+
+interface Props {
+  link: FriendLink;
+  visitSiteLabel: string;
+}
+
+const { link, visitSiteLabel } = Astro.props;
+---
+
+<a
+  href={link.url}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="friend-card group block p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-600"
+>
+  <div class="flex items-center space-x-4">
+    {link.avatar && (
+      <div class="flex-shrink-0">
+        <img
+          src={link.avatar}
+          alt={link.name}
+          loading="lazy"
+          class="w-12 h-12 rounded-full object-cover border-2 border-gray-200 dark:border-gray-600 group-hover:border-blue-300 dark:group-hover:border-blue-600 transition-colors"
+        />
+      </div>
+    )}
+    <div class="flex-1 min-w-0">
+      <h3 class="text-lg font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate">
+        {link.name}
+      </h3>
+      {link.description && (
+        <p class="text-sm text-gray-600 dark:text-gray-300 mt-1 line-clamp-2">
+          {link.description}
+        </p>
+      )}
+    </div>
+  </div>
+  <div class="mt-4 flex items-center text-sm text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300 transition-colors">
+    <span>{visitSiteLabel}</span>
+    <svg
+      class="ml-2 w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+      />
+    </svg>
+  </div>
+</a>
+
+<style>
+  .friend-card {
+    transform: translateY(0);
+  }
+
+  .friend-card:hover {
+    transform: translateY(-2px);
+  }
+</style>

@@ -6,6 +6,9 @@ export const en: Translation = {
   [Key.about]: "About",
   [Key.archive]: "Archive",
   [Key.friends]: "Friend Links",
+  [Key.visitSite]: "Visit Site",
+  [Key.noFriends]: "No friend links yet",
+  [Key.noFriendsHint]: "Welcome to exchange links with me!",
   [Key.search]: "Search",
 
   [Key.tags]: "Tags",

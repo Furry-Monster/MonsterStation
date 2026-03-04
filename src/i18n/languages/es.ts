@@ -6,6 +6,9 @@ export const es: Translation = {
   [Key.about]: "Sobre mí",
   [Key.archive]: "Archivo",
   [Key.friends]: 'Enlaces amistosos',
+  [Key.visitSite]: 'Visitar sitio',
+  [Key.noFriends]: 'Aún no hay enlaces',
+  [Key.noFriendsHint]: 'Bienvenido a intercambiar enlaces conmigo.',
   [Key.search]: "Buscar",
 
   [Key.tags]: "Etiquetas",

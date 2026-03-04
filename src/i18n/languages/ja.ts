@@ -5,7 +5,10 @@ export const ja: Translation = {
   [Key.home]: 'Home',
   [Key.about]: 'About',
   [Key.archive]: 'アーカイブ',
-  [Key.friends]:'フレンドリーリンク',
+  [Key.friends]: 'フレンドリーリンク',
+  [Key.visitSite]: 'サイトへ',
+  [Key.noFriends]: 'まだフレンドリンクはありません',
+  [Key.noFriendsHint]: 'リンク交換をお待ちしています！',
   [Key.search]: '検索',
 
   [Key.tags]: 'タグ',

@@ -102,12 +102,6 @@ export const friendsConfig: FriendsConfig = {
   title: "看看大伙在做什么~",
   description: "欢迎交换友链！请通过邮件(4urrym0nster@gmail.com)或其他方式联系我。",
   links: [
-    {
-      name: "示例友链",
-      url: "https://example.com",
-      description: "这是一个示例友链",
-      avatar: "https://via.placeholder.com/64",
-    },
     // More Friends link added here
   ],
 };

@@ -1,0 +1,14 @@
+---
+interface Props {
+  noFriendsLabel: string;
+  hintLabel: string;
+}
+
+const { noFriendsLabel, hintLabel } = Astro.props;
+---
+
+<div class="text-center py-12">
+  <div class="text-6xl mb-4" aria-hidden="true">&#x1F517;</div>
+  <p class="text-gray-600 dark:text-gray-300 text-lg">{noFriendsLabel}</p>
+  <p class="text-gray-500 dark:text-gray-400 text-sm mt-2">{hintLabel}</p>
+</div>

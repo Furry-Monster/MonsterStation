@@ -3,6 +3,9 @@ enum I18nKey {
   about = "about",
   archive = "archive",
   friends = "friends",
+  visitSite = "visitSite",
+  noFriends = "noFriends",
+  noFriendsHint = "noFriendsHint",
   search = "search",
 
   tags = "tags",
