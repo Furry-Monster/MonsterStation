@@ -40,7 +40,7 @@ const content = `---
 title: ${args[0]}
 published: ${getDate()}
 description: ''
-image: ''
+image: ./cover.png
 tags: []
 category: ''
 draft: false 
