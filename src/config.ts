@@ -110,16 +110,14 @@ export const showcaseConfig: ShowcaseConfig = {
     items: [
       {
         title: "【推しの子】 第3期",
-        cover:
-          "https://lain.bgm.tv/r/400/pic/cover/l/92/95/517057_257ad.jpg",
+        cover: "https://lain.bgm.tv/r/400/pic/cover/l/92/95/517057_257ad.jpg",
         url: "https://bgm.tv/subject/517057",
         status: "watching",
         note: "TV · 第三季",
       },
       {
         title: "NEEDY GIRL OVERDOSE",
-        cover:
-          "https://lain.bgm.tv/r/400/pic/cover/l/8d/c7/606263_3fRrj.jpg",
+        cover: "https://lain.bgm.tv/r/400/pic/cover/l/8d/c7/606263_3fRrj.jpg",
         url: "https://bgm.tv/subject/606263",
         status: "watching",
         note: "TV · 主播女孩重度依赖",
@@ -127,32 +125,28 @@ export const showcaseConfig: ShowcaseConfig = {
       {
         title:
           "わたしが恋人になれるわけないじゃん、ムリムリ！（※ムリじゃなかった!?）",
-        cover:
-          "https://lain.bgm.tv/r/400/pic/cover/l/ae/03/524707_1quxk.jpg",
+        cover: "https://lain.bgm.tv/r/400/pic/cover/l/ae/03/524707_1quxk.jpg",
         url: "https://bgm.tv/subject/524707",
         status: "watching",
         note: "TV · 恋人不行",
       },
       {
         title: "Re：从零开始的异世界生活 第四季 丧失篇",
-        cover:
-          "https://lain.bgm.tv/r/400/pic/cover/l/8e/70/547888_46dnk.jpg",
+        cover: "https://lain.bgm.tv/r/400/pic/cover/l/8e/70/547888_46dnk.jpg",
         url: "https://bgm.tv/subject/547888",
         status: "watching",
         note: "TV · 贤者塔篇",
       },
       {
         title: "超かぐや姫！",
-        cover:
-          "https://lain.bgm.tv/r/400/pic/cover/l/f6/0f/604826_2XWRN.jpg",
+        cover: "https://lain.bgm.tv/r/400/pic/cover/l/f6/0f/604826_2XWRN.jpg",
         url: "https://bgm.tv/subject/604826",
         status: "watching",
         note: "WEB / 超时空辉夜姬！",
       },
       {
         title: "葬送的芙莉莲 第二季",
-        cover:
-          "https://lain.bgm.tv/r/400/pic/cover/l/0b/24/515759_qA1Zc.jpg",
+        cover: "https://lain.bgm.tv/r/400/pic/cover/l/0b/24/515759_qA1Zc.jpg",
         url: "https://bgm.tv/subject/515759",
         status: "watching",
         note: "TV · 第2期",
@@ -504,9 +498,16 @@ export const showcaseConfig: ShowcaseConfig = {
 
 export const friendsConfig: FriendsConfig = {
   title: "看看大伙在做什么~",
-  description: "欢迎交换友链！请通过邮件(4urrym0nster@gmail.com)或其他方式联系我。",
+  description:
+    "欢迎交换友链！请通过邮件(4urrym0nster@gmail.com)或其他方式联系我。",
   links: [
-    // More Friends link added here
+    {
+      name: "Sinan Wang",
+      url: "https://wsn18381187.github.io/my-personal-page-1/",
+      description: "Energetic for life!",
+      avatar:
+        "https://wsn18381187.github.io/my-personal-page-1/img/myphoto.png",
+    },
   ],
 };
 
@@ -528,4 +529,3 @@ export const giscusConfig: GiscusConfig = {
   emitMetadata: false,
   inputPosition: "top",
 };
-
