@@ -39,6 +39,7 @@ export enum LinkPreset {
   Archive = 1,
   About = 2,
   Friends = 3,
+  Showcase = 4,
 }
 
 export type NavBarLink = {
@@ -73,6 +74,58 @@ export type FriendsConfig = {
   title?: string;
   description?: string;
   links: FriendLink[];
+};
+
+/** Bangumi 等条目页链接 + 封面图 URL（与条目一致） */
+export type ShowcaseAnimeItem = {
+  title: string;
+  cover: string;
+  url: string;
+  status?: "watching" | "completed" | "plan" | "hold";
+  note?: string;
+};
+
+/** 绘画作品：`image` 可为外链，或相对 `src/assets/showcase/` 的文件名 */
+export type ShowcaseGalleryItem = {
+  title: string;
+  image: string;
+  description?: string;
+  link?: string;
+  date?: string;
+};
+
+export type ShowcaseMusicItem = {
+  title: string;
+  artist: string;
+  cover: string;
+  url: string;
+  note?: string;
+};
+
+export type ShowcaseGameItem = {
+  title: string;
+  cover: string;
+  url: string;
+  platform?: string;
+  note?: string;
+};
+
+export type ShowcaseSection<T> = {
+  /** 为 false 时不渲染该区块 */
+  enabled?: boolean;
+  /** 覆盖默认区块标题 */
+  title?: string;
+  description?: string;
+  items: T[];
+};
+
+export type ShowcaseConfig = {
+  title?: string;
+  description?: string;
+  anime: ShowcaseSection<ShowcaseAnimeItem>;
+  gallery: ShowcaseSection<ShowcaseGalleryItem>;
+  music: ShowcaseSection<ShowcaseMusicItem>;
+  games: ShowcaseSection<ShowcaseGameItem>;
 };
 
 export type LicenseConfig = {

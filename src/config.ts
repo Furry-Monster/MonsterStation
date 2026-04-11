@@ -4,6 +4,7 @@ import type {
   LicenseConfig,
   NavBarConfig,
   ProfileConfig,
+  ShowcaseConfig,
   SiteConfig,
 } from "./types/config";
 import { LinkPreset } from "./types/config";
@@ -50,6 +51,7 @@ export const navBarConfig: NavBarConfig = {
     LinkPreset.Home,
     LinkPreset.Archive,
     LinkPreset.About,
+    LinkPreset.Showcase,
     LinkPreset.Friends,
     {
       name: "GitHub",
@@ -97,6 +99,59 @@ export const profileConfig: ProfileConfig = {
       url: "https://dev.to/furrymonster",
     },
   ],
+};
+
+/** 追番 / 画廊 / 音乐 / 游戏展示页，数据集中在此配置 */
+export const showcaseConfig: ShowcaseConfig = {
+  title: "兴趣陈列室",
+  description: "代码之外",
+  anime: {
+    enabled: true,
+    items: [
+      {
+        title: "【我推的孩子】",
+        cover:
+          "https://lain.bgm.tv/r/400/pic/cover/l/98/5e/386809_1yR81.jpg",
+        url: "https://bgm.tv/subject/386809",
+        status: "watching",
+        note: "TV 第一季",
+      },
+    ],
+  },
+  gallery: {
+    enabled: true,
+    description: "将图片放在 src/assets/showcase/ 下，在此填写相对文件名即可。",
+    items: [
+      // 示例（替换为你的作品文件名）：
+      // { title: "习作", image: "sketch-01.png", description: "2025", link: "https://..." },
+    ],
+  },
+  music: {
+    enabled: true,
+    items: [
+      {
+        title: "THE BOOK",
+        artist: "YOASOBI",
+        cover:
+          "https://upload.wikimedia.org/wikipedia/en/3/3c/Yoasobi_-_The_Book.jpg",
+        url: "https://en.wikipedia.org/wiki/The_Book_(Yoasobi_album)",
+        note: "专辑",
+      },
+    ],
+  },
+  games: {
+    enabled: true,
+    items: [
+      {
+        title: "Portal 2",
+        cover:
+          "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/620/library_600x900_2x.jpg",
+        url: "https://store.steampowered.com/app/620/Portal_2/",
+        platform: "Steam",
+        note: "合作解谜",
+      },
+    ],
+  },
 };
 
 export const friendsConfig: FriendsConfig = {

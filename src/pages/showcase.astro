@@ -1,0 +1,300 @@
+---
+import MainGridLayout from "../layouts/MainGridLayout.astro";
+import ShowcaseCoverCard from "../components/showcase/ShowcaseCoverCard.astro";
+import ShowcaseGalleryCard from "../components/showcase/ShowcaseGalleryCard.astro";
+import { showcaseConfig } from "../config";
+import { i18n } from "../i18n/translation";
+import I18nKey from "../i18n/i18nKey";
+import type { ShowcaseAnimeItem } from "../types/config";
+import { url } from "../utils/url-utils";
+
+const pageTitle = showcaseConfig.title ?? i18n(I18nKey.showcase);
+const pageDescription =
+  showcaseConfig.description ?? i18n(I18nKey.showcase);
+
+function animeStatusLabel(
+  status: ShowcaseAnimeItem["status"],
+): string | undefined {
+  if (!status) return undefined;
+  const map: Record<NonNullable<ShowcaseAnimeItem["status"]>, I18nKey> = {
+    watching: I18nKey.showcaseStatusWatching,
+    completed: I18nKey.showcaseStatusCompleted,
+    plan: I18nKey.showcaseStatusPlan,
+    hold: I18nKey.showcaseStatusHold,
+  };
+  return i18n(map[status]);
+}
+
+const sections = [
+  {
+    id: "showcase-anime",
+    key: "anime" as const,
+    enabled: showcaseConfig.anime.enabled !== false,
+    title: showcaseConfig.anime.title ?? i18n(I18nKey.showcaseAnime),
+    description: showcaseConfig.anime.description,
+    count: showcaseConfig.anime.items.length,
+  },
+  {
+    id: "showcase-gallery",
+    key: "gallery" as const,
+    enabled: showcaseConfig.gallery.enabled !== false,
+    title: showcaseConfig.gallery.title ?? i18n(I18nKey.showcaseGallery),
+    description: showcaseConfig.gallery.description,
+    count: showcaseConfig.gallery.items.length,
+  },
+  {
+    id: "showcase-music",
+    key: "music" as const,
+    enabled: showcaseConfig.music.enabled !== false,
+    title: showcaseConfig.music.title ?? i18n(I18nKey.showcaseMusic),
+    description: showcaseConfig.music.description,
+    count: showcaseConfig.music.items.length,
+  },
+  {
+    id: "showcase-games",
+    key: "games" as const,
+    enabled: showcaseConfig.games.enabled !== false,
+    title: showcaseConfig.games.title ?? i18n(I18nKey.showcaseGames),
+    description: showcaseConfig.games.description,
+    count: showcaseConfig.games.items.length,
+  },
+];
+
+const navSections = sections.filter((s) => s.enabled);
+---
+
+<MainGridLayout title={pageTitle} description={pageDescription}>
+  <div
+    class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32"
+  >
+    <div class="card-base z-10 px-9 py-6 relative w-full">
+      <header class="mb-8">
+        <h1 class="text-4xl font-bold mb-3 text-black/90 dark:text-white/90">
+          {pageTitle}
+        </h1>
+        {
+          showcaseConfig.description && (
+            <p class="text-black/60 dark:text-white/60 max-w-2xl leading-relaxed">
+              {showcaseConfig.description}
+            </p>
+          )
+        }
+      </header>
+
+      {
+        navSections.length > 0 && (
+          <nav
+            class="flex flex-wrap gap-2 mb-12 pb-4 border-b border-[var(--line-divider)]"
+            aria-label="Showcase sections"
+          >
+            {navSections.map((s) => (
+              <a
+                href={url(`/showcase/#${s.id}`)}
+                class="inline-flex items-center px-3.5 py-1.5 rounded-full text-sm font-medium
+                  bg-[var(--btn-regular-bg)] hover:bg-[var(--btn-regular-bg-hover)] active:bg-[var(--btn-regular-bg-active)]
+                  text-black/75 dark:text-white/80 border border-[var(--line-divider)] hover:border-[var(--primary)]/40 transition-colors"
+              >
+                {s.title}
+                <span class="ml-1.5 text-xs opacity-50 tabular-nums">
+                  {s.count}
+                </span>
+              </a>
+            ))}
+          </nav>
+        )
+      }
+
+      <div class="flex flex-col gap-16">
+        {
+          showcaseConfig.anime.enabled !== false && (
+            <section
+              id="showcase-anime"
+              class="scroll-mt-24"
+              aria-labelledby="heading-anime"
+            >
+              <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-2 mb-6">
+                <div>
+                  <h2
+                    id="heading-anime"
+                    class="text-2xl font-bold flex items-center gap-2"
+                  >
+                    <span
+                      class="w-1 h-7 rounded-full bg-[var(--primary)] shrink-0"
+                      aria-hidden="true"
+                    />
+                    {showcaseConfig.anime.title ?? i18n(I18nKey.showcaseAnime)}
+                  </h2>
+                  {showcaseConfig.anime.description && (
+                    <p class="mt-2 text-sm text-black/55 dark:text-white/55 max-w-xl">
+                      {showcaseConfig.anime.description}
+                    </p>
+                  )}
+                </div>
+              </div>
+              {showcaseConfig.anime.items.length === 0 ? (
+                <p class="text-sm text-black/45 dark:text-white/45 italic py-6 px-4 rounded-lg bg-[var(--btn-regular-bg)] border border-dashed border-[var(--line-divider)]">
+                  {i18n(I18nKey.showcaseEmptySection)}
+                </p>
+              ) : (
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+                  {showcaseConfig.anime.items.map((item) => (
+                    <ShowcaseCoverCard
+                      href={item.url}
+                      cover={item.cover}
+                      title={item.title}
+                      badge={animeStatusLabel(item.status)}
+                      note={item.note}
+                      aspect="poster"
+                      visitLabel={i18n(I18nKey.visitSite)}
+                    />
+                  ))}
+                </div>
+              )}
+            </section>
+          )
+        }
+
+        {
+          showcaseConfig.gallery.enabled !== false && (
+            <section
+              id="showcase-gallery"
+              class="scroll-mt-24"
+              aria-labelledby="heading-gallery"
+            >
+              <div class="mb-6">
+                <h2
+                  id="heading-gallery"
+                  class="text-2xl font-bold flex items-center gap-2"
+                >
+                  <span
+                    class="w-1 h-7 rounded-full bg-[var(--primary)] shrink-0"
+                    aria-hidden="true"
+                  />
+                  {showcaseConfig.gallery.title ??
+                    i18n(I18nKey.showcaseGallery)}
+                </h2>
+                {showcaseConfig.gallery.description && (
+                  <p class="mt-2 text-sm text-black/55 dark:text-white/55 max-w-xl">
+                    {showcaseConfig.gallery.description}
+                  </p>
+                )}
+              </div>
+              {showcaseConfig.gallery.items.length === 0 ? (
+                <p class="text-sm text-black/45 dark:text-white/45 italic py-6 px-4 rounded-lg bg-[var(--btn-regular-bg)] border border-dashed border-[var(--line-divider)]">
+                  {i18n(I18nKey.showcaseEmptySection)}
+                </p>
+              ) : (
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {showcaseConfig.gallery.items.map((item) => (
+                    <ShowcaseGalleryCard
+                      title={item.title}
+                      image={item.image}
+                      description={item.description}
+                      date={item.date}
+                      link={item.link}
+                      visitLabel={i18n(I18nKey.visitSite)}
+                    />
+                  ))}
+                </div>
+              )}
+            </section>
+          )
+        }
+
+        {
+          showcaseConfig.music.enabled !== false && (
+            <section
+              id="showcase-music"
+              class="scroll-mt-24"
+              aria-labelledby="heading-music"
+            >
+              <div class="mb-6">
+                <h2
+                  id="heading-music"
+                  class="text-2xl font-bold flex items-center gap-2"
+                >
+                  <span
+                    class="w-1 h-7 rounded-full bg-[var(--primary)] shrink-0"
+                    aria-hidden="true"
+                  />
+                  {showcaseConfig.music.title ?? i18n(I18nKey.showcaseMusic)}
+                </h2>
+                {showcaseConfig.music.description && (
+                  <p class="mt-2 text-sm text-black/55 dark:text-white/55 max-w-xl">
+                    {showcaseConfig.music.description}
+                  </p>
+                )}
+              </div>
+              {showcaseConfig.music.items.length === 0 ? (
+                <p class="text-sm text-black/45 dark:text-white/45 italic py-6 px-4 rounded-lg bg-[var(--btn-regular-bg)] border border-dashed border-[var(--line-divider)]">
+                  {i18n(I18nKey.showcaseEmptySection)}
+                </p>
+              ) : (
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+                  {showcaseConfig.music.items.map((item) => (
+                    <ShowcaseCoverCard
+                      href={item.url}
+                      cover={item.cover}
+                      title={item.title}
+                      subtitle={item.artist}
+                      note={item.note}
+                      aspect="square"
+                      visitLabel={i18n(I18nKey.visitSite)}
+                    />
+                  ))}
+                </div>
+              )}
+            </section>
+          )
+        }
+
+        {
+          showcaseConfig.games.enabled !== false && (
+            <section
+              id="showcase-games"
+              class="scroll-mt-24"
+              aria-labelledby="heading-games"
+            >
+              <div class="mb-6">
+                <h2
+                  id="heading-games"
+                  class="text-2xl font-bold flex items-center gap-2"
+                >
+                  <span
+                    class="w-1 h-7 rounded-full bg-[var(--primary)] shrink-0"
+                    aria-hidden="true"
+                  />
+                  {showcaseConfig.games.title ?? i18n(I18nKey.showcaseGames)}
+                </h2>
+                {showcaseConfig.games.description && (
+                  <p class="mt-2 text-sm text-black/55 dark:text-white/55 max-w-xl">
+                    {showcaseConfig.games.description}
+                  </p>
+                )}
+              </div>
+              {showcaseConfig.games.items.length === 0 ? (
+                <p class="text-sm text-black/45 dark:text-white/45 italic py-6 px-4 rounded-lg bg-[var(--btn-regular-bg)] border border-dashed border-[var(--line-divider)]">
+                  {i18n(I18nKey.showcaseEmptySection)}
+                </p>
+              ) : (
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
+                  {showcaseConfig.games.items.map((item) => (
+                    <ShowcaseCoverCard
+                      href={item.url}
+                      cover={item.cover}
+                      title={item.title}
+                      subtitle={item.platform}
+                      note={item.note}
+                      aspect="poster"
+                      visitLabel={i18n(I18nKey.visitSite)}
+                    />
+                  ))}
+                </div>
+              )}
+            </section>
+          )
+        }
+      </div>
+    </div>
+  </div>
+</MainGridLayout>

@@ -1,0 +1,105 @@
+---
+import ShowcaseImage from "./ShowcaseImage.astro";
+
+interface Props {
+  href: string;
+  cover: string;
+  title: string;
+  subtitle?: string;
+  badge?: string;
+  note?: string;
+  visitLabel?: string;
+  /** 番剧 / 游戏竖版封面；音乐用 square */
+  aspect?: "poster" | "square";
+}
+
+const {
+  href,
+  cover,
+  title,
+  subtitle,
+  badge,
+  note,
+  visitLabel = "Link",
+  aspect = "poster",
+} = Astro.props;
+
+const aspectClass =
+  aspect === "square" ? "aspect-square" : "aspect-[2/3]";
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="showcase-cover-card group flex flex-col h-full rounded-xl overflow-hidden border border-[var(--line-divider)] bg-[var(--card-bg)] shadow-sm hover:shadow-md hover:border-[var(--primary)]/35 transition-all duration-300"
+>
+  <div
+    class:list={[
+      "relative overflow-hidden bg-black/[0.06] dark:bg-white/[0.06]",
+      aspectClass,
+    ]}
+  >
+    <ShowcaseImage
+      src={cover}
+      alt={title}
+      class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+    />
+    {
+      badge && (
+        <span class="absolute top-2 right-2 text-[0.65rem] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-md bg-black/65 text-white backdrop-blur-sm">
+          {badge}
+        </span>
+      )
+    }
+  </div>
+  <div class="p-3 flex flex-col flex-1 gap-1 min-w-0">
+    <h3
+      class="font-bold text-base text-black/90 dark:text-white/90 leading-snug line-clamp-2 group-hover:text-[var(--primary)] transition-colors"
+    >
+      {title}
+    </h3>
+    {
+      subtitle && (
+        <p class="text-sm text-black/55 dark:text-white/55 truncate">
+          {subtitle}
+        </p>
+      )
+    }
+    {
+      note && (
+        <p class="text-xs text-black/45 dark:text-white/45 line-clamp-2 mt-auto pt-1">
+          {note}
+        </p>
+      )
+    }
+    <div
+      class="mt-2 flex items-center text-xs font-medium text-[var(--primary)] opacity-90 group-hover:opacity-100"
+    >
+      <span class="truncate">{visitLabel}</span>
+      <svg
+        class="ml-1 w-3.5 h-3.5 shrink-0 transform group-hover:translate-x-0.5 transition-transform"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+        />
+      </svg>
+    </div>
+  </div>
+</a>
+
+<style>
+  .showcase-cover-card {
+    transform: translateY(0);
+  }
+  .showcase-cover-card:hover {
+    transform: translateY(-3px);
+  }
+</style>

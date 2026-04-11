@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets";
+import path from "node:path";
+import { url } from "../../utils/url-utils";
+
+interface Props {
+  src: string;
+  alt: string;
+  class?: string;
+}
+
+const { src, alt, class: className = "" } = Astro.props;
+
+const isRemote =
+  src.startsWith("http") ||
+  src.startsWith("https") ||
+  src.startsWith("//");
+const isPublic = src.startsWith("/");
+
+let localImg: ImageMetadata | undefined;
+if (!isRemote && !isPublic) {
+  const files = import.meta.glob<ImageMetadata>("../../assets/showcase/**", {
+    import: "default",
+  });
+  const normalizedPath = path
+    .normalize(path.join("../../assets/showcase/", src))
+    .replace(/\\/g, "/");
+  const loader = files[normalizedPath];
+  if (loader) {
+    localImg = await loader();
+  }
+}
+---
+
+{
+  isRemote && (
+    <img src={src} alt={alt} class={className} loading="lazy" decoding="async" />
+  )
+}
+{
+  isPublic && (
+    <img
+      src={url(src)}
+      alt={alt}
+      class={className}
+      loading="lazy"
+      decoding="async"
+    />
+  )
+}
+{
+  !isRemote && !isPublic && localImg && (
+    <Image src={localImg} alt={alt} class={className} />
+  )
+}
+{
+  !isRemote && !isPublic && !localImg && (
+    <div
+      class:list={[
+        className,
+        "flex items-center justify-center bg-[var(--btn-regular-bg)] text-sm text-black/40 dark:text-white/40 min-h-[6rem]",
+      ]}
+    >
+      ?
+    </div>
+  )
+}
