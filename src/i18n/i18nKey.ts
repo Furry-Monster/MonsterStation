@@ -6,6 +6,7 @@ enum I18nKey {
   showcase = "showcase",
   showcaseAnime = "showcaseAnime",
   showcaseGallery = "showcaseGallery",
+  showcasePreviewImage = "showcasePreviewImage",
   showcaseMusic = "showcaseMusic",
   showcaseGames = "showcaseGames",
   showcaseEmptySection = "showcaseEmptySection",

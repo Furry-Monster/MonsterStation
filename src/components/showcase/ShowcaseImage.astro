@@ -7,9 +7,11 @@ interface Props {
   src: string;
   alt: string;
   class?: string;
+  /** 悬停提示与无障碍标签（如「点击放大预览」） */
+  hint?: string;
 }
 
-const { src, alt, class: className = "" } = Astro.props;
+const { src, alt, class: className = "", hint } = Astro.props;
 
 const isRemote =
   src.startsWith("http") ||
@@ -34,7 +36,15 @@ if (!isRemote && !isPublic) {
 
 {
   isRemote && (
-    <img src={src} alt={alt} class={className} loading="lazy" decoding="async" />
+    <img
+      src={src}
+      alt={alt}
+      class={className}
+      loading="lazy"
+      decoding="async"
+      title={hint}
+      aria-label={hint ?? alt}
+    />
   )
 }
 {
@@ -45,12 +55,20 @@ if (!isRemote && !isPublic) {
       class={className}
       loading="lazy"
       decoding="async"
+      title={hint}
+      aria-label={hint ?? alt}
     />
   )
 }
 {
   !isRemote && !isPublic && localImg && (
-    <Image src={localImg} alt={alt} class={className} />
+    <Image
+      src={localImg}
+      alt={alt}
+      class={className}
+      title={hint}
+      aria-label={hint ?? alt}
+    />
   )
 }
 {
