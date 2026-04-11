@@ -109,33 +109,77 @@ export const showcaseConfig: ShowcaseConfig = {
     enabled: true,
     items: [
       {
-        title: "【我推的孩子】",
+        title: "【推しの子】 第3期",
         cover:
-          "https://lain.bgm.tv/r/400/pic/cover/l/98/5e/386809_1yR81.jpg",
-        url: "https://bgm.tv/subject/386809",
+          "https://lain.bgm.tv/r/400/pic/cover/l/92/95/517057_257ad.jpg",
+        url: "https://bgm.tv/subject/517057",
         status: "watching",
-        note: "TV 第一季",
+        note: "TV · 第三季",
+      },
+      {
+        title: "NEEDY GIRL OVERDOSE",
+        cover:
+          "https://lain.bgm.tv/r/400/pic/cover/l/8d/c7/606263_3fRrj.jpg",
+        url: "https://bgm.tv/subject/606263",
+        status: "watching",
+        note: "TV · 主播女孩重度依赖",
+      },
+      {
+        title:
+          "わたしが恋人になれるわけないじゃん、ムリムリ！（※ムリじゃなかった!?）",
+        cover:
+          "https://lain.bgm.tv/r/400/pic/cover/l/ae/03/524707_1quxk.jpg",
+        url: "https://bgm.tv/subject/524707",
+        status: "watching",
+        note: "TV · 恋人不行",
       },
     ],
   },
   gallery: {
     enabled: true,
-    description: "将图片放在 src/assets/showcase/ 下，在此填写相对文件名即可。",
     items: [
-      // 示例（替换为你的作品文件名）：
-      // { title: "习作", image: "sketch-01.png", description: "2025", link: "https://..." },
+      { title: "Happy Anniversary", image: "happyaniversary.png" },
+      { title: "Kana", image: "kana.png" },
+      { title: "Miku", image: "miku.png" },
+      { title: "Manga · 紫阳花", image: "manga-ajisai.png" },
+      { title: "Nina × Subaru", image: "ninaXsubaru.png" },
+      { title: "SHF", image: "shf.png" },
     ],
   },
   music: {
     enabled: true,
     items: [
       {
-        title: "THE BOOK",
-        artist: "YOASOBI",
+        title: "Tokimeki",
+        artist: "Vaundy",
         cover:
-          "https://upload.wikimedia.org/wikipedia/en/3/3c/Yoasobi_-_The_Book.jpg",
-        url: "https://en.wikipedia.org/wiki/The_Book_(Yoasobi_album)",
-        note: "专辑",
+          "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/3d/cb/cb/3dcbcb5b-a4ff-307c-c496-bd8e6b90a504/197189838293.jpg/600x600bb.jpg",
+        url: "https://music.apple.com/jp/album/tokimeki/1706831539?i=1706831556",
+        note: "シングル",
+      },
+      {
+        title: "おもかげ (produced by Vaundy)",
+        artist: "milet × Aimer × 幾田りら",
+        cover:
+          "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/ec/1d/a0/ec1da08d-502e-9d7e-10d5-2dd301a0314f/4547366542912.jpg/600x600bb.jpg",
+        url: "https://music.apple.com/jp/album/%E3%81%8A%E3%82%82%E3%81%8B%E3%81%92-produced-by-vaundy/1598330550?i=1598330658",
+        note: "シングル",
+      },
+      {
+        title: "茜",
+        artist: "ヨルシカ",
+        cover:
+          "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/28/7d/d2/287dd29e-cffa-ea42-79ce-ceeb764b70ac/25UM2IM05371.rgb.jpg/600x600bb.jpg",
+        url: "https://music.apple.com/jp/album/%E8%8C%9C/1869557597?i=1869557604",
+        note: "デジタルシングル",
+      },
+      {
+        title: "Latata",
+        artist: "幾田りら",
+        cover:
+          "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/6a/63/19/6a63198f-584f-1414-82f7-0ea6605361c2/199806619766.jpg/600x600bb.jpg",
+        url: "https://music.apple.com/jp/album/latata/1857886408?i=1857886413",
+        note: "アルバム『Laugh』収録",
       },
     ],
   },
@@ -143,12 +187,40 @@ export const showcaseConfig: ShowcaseConfig = {
     enabled: true,
     items: [
       {
-        title: "Portal 2",
+        title: "SILENT HILL f",
         cover:
-          "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/620/library_600x900_2x.jpg",
-        url: "https://store.steampowered.com/app/620/Portal_2/",
+          "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2947440/library_600x900_2x.jpg",
+        url: "https://store.steampowered.com/app/2947440/",
         platform: "Steam",
-        note: "合作解谜",
+      },
+      {
+        title: "ELDEN RING NIGHTREIGN",
+        cover:
+          "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2622380/library_600x900_2x.jpg",
+        url: "https://store.steampowered.com/app/2622380/",
+        platform: "Steam",
+      },
+      {
+        title: "Resident Evil 9",
+        cover:
+          "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3764200/library_600x900_2x.jpg",
+        url: "https://store.steampowered.com/app/3764200/",
+        platform: "Steam",
+        note: "Resident Evil Requiem",
+      },
+      {
+        title: "Monster Hunter Rise",
+        cover:
+          "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1446780/library_600x900_2x.jpg",
+        url: "https://store.steampowered.com/app/1446780/",
+        platform: "Steam",
+      },
+      {
+        title: "Devil May Cry 5",
+        cover:
+          "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/601150/library_600x900_2x.jpg",
+        url: "https://store.steampowered.com/app/601150/",
+        platform: "Steam",
       },
     ],
   },
