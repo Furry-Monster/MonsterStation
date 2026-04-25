@@ -508,6 +508,12 @@ export const friendsConfig: FriendsConfig = {
       avatar:
         "https://wsn18381187.github.io/my-personal-page-1/img/myphoto.png",
     },
+    {
+      name: "hanmi255",
+      url: "https://hanmi255.netlify.app/",
+      description: "Let`s Think",
+      avatar: "https://hanmi255.netlify.app/img/social-card.webp",
+    }
   ],
 };
 
